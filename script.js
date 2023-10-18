@@ -1,5 +1,5 @@
-function nonArticleNumber(input){
-	let word = input.split();
+function ArticleLess(input){
+	let word = input.split(" ");
 	let nonArticleWord = filter.map((word) => {
 		let lowerCaseWord = word.toLowerCase();
 		if(lowerCaseWord==="the"||lowerCaseWord==="an"||lowerVaseWord==="a")
