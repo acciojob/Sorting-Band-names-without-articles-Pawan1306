@@ -1,9 +1,9 @@
 function ArticleLess(input) {
-  let words = input.split(" ");
-  let nonArticleWords = words.filter((word) => {
-    let lowerCaseWord = word.toLowerCase();
-    return !(lowerCaseWord === "the" || lowerCaseWord === "an" || lowerCaseWord === "a");
-  });
+  // Define a regular expression pattern to match articles with word boundaries
+  const articlePattern = /\b(the|an|a)\b/gi;
 
-  return nonArticleWords.join(" ");
+  // Use the replace method to remove articles from the input string
+  const result = input.replace(articlePattern, "");
+
+  return result;
 }
