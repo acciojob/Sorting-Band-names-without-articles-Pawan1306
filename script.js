@@ -1,13 +1,9 @@
-function ArticleLess(input){
-	let word = input.split(" ");
-	let nonArticleWord = word.filter((word) => {
-		let lowerCaseWord = word.toLowerCase();
-		if(lowerCaseWord==="the"||lowerCaseWord==="an"||lowerVaseWord==="a")
-			return false;
-	}
-		return	true;						
-});
+function ArticleLess(input) {
+  let words = input.split(" ");
+  let nonArticleWords = words.filter((word) => {
+    let lowerCaseWord = word.toLowerCase();
+    return !(lowerCaseWord === "the" || lowerCaseWord === "an" || lowerCaseWord === "a");
+  });
 
-  return  nonArticleWord.join(" ");
-
-
+  return nonArticleWords.join(" ");
+}
